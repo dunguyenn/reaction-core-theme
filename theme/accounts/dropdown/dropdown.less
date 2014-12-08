@@ -23,7 +23,6 @@
     }
     .user-accounts-dropdown-apps {
       margin-top: 10px;
-      i { font-size: 45px; }
     }
     .dropdown-apps-icon {
       cursor: pointer;
@@ -86,12 +85,13 @@
 }
 
 .additional-link-container {
+  //  TODO: fix forced attribution
   a {
-    color: @link-color;
+    color: @link-color !important;
   }
   a:hover {
-    color: @link-hover-color;
-    background-color: transparent;
+    color: @link-hover-color !important;
+    background-color: transparent !important;
   }
 }
 
