@@ -232,17 +232,22 @@
 @meteor-accounts-dialog-border-width: 1px;
 
 .accounts-dialog {
-  border: @meteor-accounts-dialog-border-width solid #ccc;
-  z-index: 1000;
-  background: @body-bg;
+//  border: @meteor-accounts-dialog-border-width solid #ccc;
+//  z-index: 1000;
+//  background: @body-bg;
   border-radius: @border-radius-base;
 
-  padding: 8px 12px;
-  margin: (@navbar-padding-vertical+@navbar-brand-font-size) -12px 0 -12px;
+  padding: @meteor-accounts-base-padding 12px;
+//  margin: (@navbar-padding-vertical+@navbar-brand-font-size) -12px 0 -12px;
+  margin: 0;
 
   width: @login-buttons-accounts-dialog-width;
 
-  .box-shadow(0 0 3px 0 rgba(0, 0, 0, 0.2));
+  @media only screen and (max-width: @screen-xs-max) {
+    width: 100%;
+  }
+
+  //.box-shadow(0 0 3px 0 rgba(0, 0, 0, 0.2));
 
   // Labels and links inherit app's font with this line commented out:
   //font-family: @font-family-base;
@@ -258,6 +263,14 @@
     line-height: inherit;
     font-size: inherit;
     font-family: inherit;
+  }
+
+  a {
+    color: @link-color;
+    &:hover {
+      color: @link-hover-color;
+      background-color: transparent;
+    }
   }
 
   label, .title {
@@ -288,7 +301,12 @@
   .message { font-size: 80%; margin-top: 8px; line-height: 1.3; }
   .error-message { color: red; }
   .info-message { color: green; }
-  .additional-link { font-size: 75%; }
+  .additional-link-container {
+    margin-top: 5px;
+  }
+  .additional-link {
+    font-size: 75%;
+  }
 
   .accounts-close {
     position: absolute;

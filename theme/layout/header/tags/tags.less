@@ -1,22 +1,86 @@
-.tag-link-list li {
-  margin-right: 0;
-  margin-left: 0;
+.navbar-primary-tags {
+  border: 0;
+  @media only screen and (max-width: @screen-xs-max) {
+    min-height: 0;
+    .tag-link-list {
+      font-size: 10px;
+    }
+  }
 }
 
-// Slide the tag edit icon over a bit
+//.navbar-tags  {
+//  padding-left: 5px;
+//  a {
+//    margin-left: -8px;
+//    margin-right: -8px;
+//    padding: (@navbar-padding-vertical + 2px) 2rem;
+//    color: @navbar-inverse-link-color;
+//  }
+//  a:hover {
+//    color: @navbar-inverse-link-hover-color;
+//    text-decoration: none;
+//    background-color: @navbar-inverse-link-hover-bg;
+//  }
+//  a:active {
+//    color: @navbar-inverse-link-active-color;
+//    text-decoration: none;
+//    background-color: @navbar-inverse-link-active-bg;
+//  }
+//}
+
+//@media only screen and (max-width: @screen-xs-max) {
+//  .navbar-tags > a {
+//    padding: @navbar-padding-vertical .8rem;
+//  }
+//}
+
+//.tag-link-list li {
+//  margin-right: 0;
+//  margin-left: 0;
+//}
+.tag-link-list {
+  font-size: 12px;
+  text-transform: uppercase;
+  @media only screen and (max-width: @screen-xs-max) {
+    margin: 0;
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+//Slide the tag edit icon over a bit
 .header-edit-tag {
-  margin-left: -15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 // size the navigation and when editing override navbar settings
 .tag-edit-list {
-  input {
-    min-width: 40px;
-  }
+  .clearfix();
+
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding-left: 20px;
+
   li {
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 2px;
+    margin-right: 5px;
+    display: list-item;
+    float: left;
   }
+
+  @media only screen and (max-width: @screen-xs-max) {
+    margin-top: 5px;
+    margin-bottom: 0;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
 }
 // Kludge fix for autocomplete hiding behind navbar
 .ui-autocomplete {
@@ -24,42 +88,50 @@
 }
 // Tag edit elements
 .tag-input-group {
-  float:none;
-  padding-right: 3px;
+  float: none;
+  width: 130px;
   position: relative;
+
   .tag-input-group-handle {
     position: absolute;
     cursor: move;
     color: @input-color-placeholder;
-    left: 4px;
-    top: 4px;
-    padding-left: 4px;
+    left: 8px;
+    top: 7px;
+    @media only screen and (min-width: @screen-md-min) {
+      top: 5px;
+    }
   }
   input {
-    padding-left: 25px;
-    padding-right: 20px;
+    padding-left: 26px;
+    padding-right: 22px;
     border-radius: @border-radius-base;
     border: 1px dotted @input-border;
     background-color: @input-bg;
     height: @input-height-small;
-    width: 130px;
     color: @input-color;
-
-  }
-  input:focus {
-    outline: none;
-    border-color: @input-border-focus;
-    box-shadow: 0 0 10px @input-border-focus;
+    width: 100%;
+    &:focus {
+      outline: none;
+      border-color: @input-border-focus;
+      box-shadow: 0 0 10px @input-border-focus;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      padding-left: 30px;
+      padding-right: 26px;
+    }
   }
   .tag-input-group-remove {
     position: absolute;
-    right: 6px;
-    top: 4px;
+    right: 8px;
+    top: 7px;
     color: @input-color-placeholder;
-    padding-right: 4px;
+    @media only screen and (min-width: @screen-md-min) {
+      top: 5px;
+    }
   }
   .tags-submit-new {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
