@@ -1,24 +1,26 @@
 .navbar-shop {
   background-color: @navbar-default-bg;
   .navbar-brand {
-    padding-left: 15px;
+    margin-left: 5px !important;
+    @media only screen and (max-width: @screen-xs-max) {
+      margin-left: 10px !important;
+    }
   }
 
   .navbar-toggle {
     border-color: transparent;
-    background-color: #fff;
+    background-color: transparent;
     .icon-bar {
-      background-color: @navbar-default-bg;
+      background-color: #fff;
     }
     &.collapsed {
       border-color: transparent;
       background-color: transparent;
-      .icon-bar {
-        background-color: #fff;
-      }
     }
+    &:hover,
     &:focus {
       border-color: #fff;
+      background-color: transparent;
     }
   }
 }

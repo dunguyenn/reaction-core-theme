@@ -1,6 +1,43 @@
 .user-accounts-dropdown {
   padding: 5px 10px;
   min-width: 200px;
+  @media only screen and (max-width: @screen-xs-max) {
+    min-width: 0;
+  }
+  .user-accounts-dropdown-content {
+    border: 1px solid @dropdown-border;
+    margin-bottom: 10px;
+    padding: 20px 5px 10px 5px;
+    text-align: center;
+  }
+  .user-accounts-dropdown-apps {
+    margin-top: 10px;
+  }
+  .dropdown-apps-icon {
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    a {
+      color: @gray-light;
+      height: 50px;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      color: @gray;
+      height: 50px;
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+  .icon-text {
+    position: relative;
+    bottom: 7px;
+    text-align: center;
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: @screen-xs-max) {
@@ -19,46 +56,7 @@
 //      padding: 10px;
 //      display: inline-block;
 //    }
-//    .user-accounts-dropdown {
-//      min-width: 200px;
-//      min-height: 225px;
-//      padding: 10px;
-//    }
-//    .user-accounts-dropdown-content {
-//      min-height: 155px;
-//      border: 1px solid @dropdown-border;
-//      margin-bottom: 10px;
-//      padding: 20px 5px 10px 5px;
-//      text-align: center;
-//    }
-//    .user-accounts-dropdown-apps {
-//      margin-top: 10px;
-//    }
-//    .dropdown-apps-icon {
-//      cursor: pointer;
-//      position: relative;
-//      margin: 10px;
-//      display: inline-block;
-//      width: 50px;
-//      height: 50px;
-//      a {
-//        color: @gray-light;
-//        height: 50px;
-//        text-decoration: none;
-//      }
-//      a:hover, a:focus {
-//        color: @gray;
-//        height: 50px;
-//        text-decoration: none;
-//        background-color: transparent;
-//      }
-//    }
-//    .icon-text {
-//      position: relative;
-//      bottom: 7px;
-//      text-align: center;
-//      font-size: 10px;
-//    }
+
 //
 //  }
 //

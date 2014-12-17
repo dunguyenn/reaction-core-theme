@@ -15,12 +15,6 @@
 .dashboard-navbar-packages {
   background-color: @navbar-default-bg;
   .nav-pills li a {border-radius: 0px;}
-  i.dashboard-drawer-close-btn {
-    color: @navbar-default-color;
-    position: absolute;
-    right: 10px;
-    margin-top: 10px;
-  }
 }
 
 /* ===============================================================
@@ -135,11 +129,17 @@ Dashboard Swiper Pagination Styles
   background: #fff;
 }
 
-.dashboard-drawer-controls {
-  float:right;
+.dashboard-drawer-close-button {
+  padding: 6px 15px;
+  font-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  &:hover {
+    background-color: darken(@navbar-default-bg, 10);
+  }
 }
 
-button.dashboard-drawer-close-button {
-  .close;
-  padding: 10px 25px;
-}
